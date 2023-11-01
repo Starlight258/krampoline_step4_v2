@@ -11,7 +11,7 @@
 SET @MYSQLDUMP_TEMP_LOG_BIN = @@SESSION.SQL_LOG_BIN;
 SET @@SESSION.SQL_LOG_BIN = 0;
 
-SET @@GLOBAL.GTID_PURGED = /*!80000 '+'*/ '';
+# SET @@GLOBAL.GTID_PURGED = /*!80000 '+'*/ '';
 
 
 CREATE SCHEMA IF NOT EXISTS `krampoline` DEFAULT CHARACTER SET utf8mb4;
@@ -23,24 +23,27 @@ FLUSH PRIVILEGES;
 USE `krampoline`;
 
 # db 예시
-DROP TABLE IF EXISTS `sample_data`;
-CREATE TABLE `sample_data`
-(
-    `id`     int(11)      NOT NULL AUTO_INCREMENT,
-    `detail` varchar(100) NOT NULL,
-    PRIMARY KEY (`id`)
-) ENGINE = InnoDB
-  AUTO_INCREMENT = 3
-  DEFAULT CHARSET = utf8mb4
-  COLLATE = utf8mb4_general_ci;
-
-INSERT INTO sample_data (`id`, `detail`)
-VALUES ('1', 'Hello DKOS!');
+# DROP TABLE IF EXISTS `sample_data`;
+# CREATE TABLE `sample_data`
+# (
+#     `id`     int(11)      NOT NULL AUTO_INCREMENT,
+#     `detail` varchar(100) NOT NULL,
+#     PRIMARY KEY (`id`)
+# ) ENGINE = InnoDB
+#   AUTO_INCREMENT = 3
+#   DEFAULT CHARSET = utf8mb4
+#   COLLATE = utf8mb4_general_ci;
+#
+# INSERT INTO sample_data (`id`, `detail`)
+# VALUES ('1', 'Hello DKOS!');
 
 --
 -- Table structure for table `member`
 --
+
 DROP TABLE IF EXISTS `member`;
+/*!40101 SET @saved_cs_client = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `member`
 (
     `id`       bigint       NOT NULL AUTO_INCREMENT,
@@ -55,23 +58,6 @@ CREATE TABLE `member`
   AUTO_INCREMENT = 266
   DEFAULT CHARSET = utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
-#
-#
-# CREATE TABLE `member`
-# (
-#     `id`       bigint       NOT NULL AUTO_INCREMENT,
-#     `email`    varchar(100) NOT NULL,
-#     `password` varchar(255) NOT NULL,
-#     `role`     varchar(30)  NOT NULL,
-#     `tel`      varchar(50)  NOT NULL,
-#     `username` varchar(45)  NOT NULL,
-#     PRIMARY KEY (`id`),
-#     UNIQUE KEY `UK_mbmcqelty0fbrvxp1q58dn57t` (`email`)
-# ) ENGINE = InnoDB
-#   AUTO_INCREMENT = 266
-#   DEFAULT CHARSET = utf8mb3;
-# /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `location`
