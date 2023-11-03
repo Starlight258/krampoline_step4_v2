@@ -36,6 +36,11 @@ spec:
                 secretKeyRef:
                   name: aws-credentials
                   key: bucketName
+            - name: KAKAOPAY_ADMIN_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: kakaomap
+                  key: adminKey
           resources:
             requests:
               memory: 1Gi
