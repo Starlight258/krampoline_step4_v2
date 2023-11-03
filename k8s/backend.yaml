@@ -39,7 +39,7 @@ spec:
             - name: KAKAOPAY_ADMIN_KEY
               valueFrom:
                 secretKeyRef:
-                  name: aws-credentials
+                  name: kakaopay
                   key: apiKey
           resources:
             requests:
