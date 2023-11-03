@@ -39,7 +39,7 @@ spec:
             - name: KAKAOPAY_ADMIN_KEY
               valueFrom:
                 secretKeyRef:
-                  name: kakaomap
+                  name: kakaopay
                   key: adminKey
           resources:
             requests:
