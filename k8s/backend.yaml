@@ -24,22 +24,22 @@ spec:
             - name: AWS_ACCESS_KEY_ID
               valueFrom:
                 secretKeyRef:
-                  name: aws-credentials
+                  name: secret
                   key: accessKey
             - name: AWS_SECRET_ACCESS_KEY
               valueFrom:
                 secretKeyRef:
-                  name: aws-credentials
+                  name: secret
                   key: secretKey
             - name: AWS_BUCKET_NAME
               valueFrom:
                 secretKeyRef:
-                  name: aws-credentials
+                  name: secret
                   key: bucketName
             - name: KAKAOPAY_ADMIN_KEY
               valueFrom:
                 secretKeyRef:
-                  name: kakaopay
+                  name: secret
                   key: apiKey
           resources:
             requests:
