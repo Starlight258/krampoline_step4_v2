@@ -173,8 +173,8 @@ CREATE TABLE `file`
 (
     `id`          bigint NOT NULL AUTO_INCREMENT,
     `name`        varchar(255)  DEFAULT NULL,
-    `path`        varchar(255)  DEFAULT NULL,
     `uploaded_at` datetime(6)   DEFAULT NULL,
+    `is_deleted` bit(1)      NOT NULL,
     `url`         varchar(1024) DEFAULT NULL,
     `c_id`        bigint        DEFAULT NULL,
     PRIMARY KEY (`id`),
