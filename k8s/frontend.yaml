@@ -17,7 +17,7 @@ spec:
           # 여러분의 frontend image 주소를 입력해주세요.
           image: krmp-d2hub-idock.9rum.cc/dev-test/repo_84b7b18c52a0
           env:
-            - name: KAKAOMAP_API_KEY
+            - name: VITE_KAKAOMAP_API_KEY
               valueFrom:
                 secretKeyRef:
                   name: secret
